@@ -7,4 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_executable(hello main.cc)
 
-install(TARGETS hello)
+include(GNUInstallDirs)
+install(TARGETS hello
+        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
